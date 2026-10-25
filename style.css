@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+.magic-container{
+    display: flex;
+    gap: 30px;
+}
+
+.magic-btn{
+    position: relative;
+    background: #fff;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #333;
+    font-size: 1.8rem;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.liquid{
+    position: absolute;
+    background: var(--clr);
+    top: -80%;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    border-radius: 40%;
+    transform: translateY(100%) rotate(0deg);
+    transition: 0.5s;
+}
+
+.magic-btn:hover .liquid{
+    top: -120px;
+    transform: translateY(0) rotate(0deg);   
+}
+
+.magic-btn:hover{
+    color: #fff;
+}
+
+.magic-btn i{
+    position: relative;
+    z-index: 1;
+}
+
+@media(max-width:600px){
+    .magic-container{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .magic-btn{
+       width: 40px; 
+       height: 40px;
+       font-size: 1rem;
+    }
+}
